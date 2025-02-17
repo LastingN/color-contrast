@@ -1,1 +1,1 @@
-# color-contrast 1
+# color-contrast
