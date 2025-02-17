@@ -1,0 +1,1 @@
+.about-container{display:flex;justify-content:center;align-items:center;min-height:100vh}.about{padding:20px;border-radius:8px;display:flex;flex-direction:column}.about p{font-size:16px;line-height:1.5;color:#333;margin-bottom:10px;text-align:left}.inspiration{text-align:left}.about a{text-decoration:none;transition:color .3s}
