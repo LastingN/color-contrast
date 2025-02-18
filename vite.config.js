@@ -15,6 +15,14 @@ export default defineConfig({
     outDir: 'dist', // 输出目录
     assetsDir: 'assets', // 静态资源目录
     emptyOutDir: true, // 构建前清空输出目录
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+      },
+    },
   },
   resolve: {
     alias: {
