@@ -8,9 +8,9 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   plugins: [
     vue(),
-    vueDevTools(),
+    vueDevTools()
   ],
-  base: "./",
+  // base: './color-contrast/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

@@ -152,9 +152,7 @@ export default {
       }
 
       this.minMatches = this.currentData.map(item => {
-        var a = dataSources.map(dataSource => this.findClosestMatch(item, dataSource));
-        // console.log('dataSources:', a);
-        return a;
+        return dataSources.map(dataSource => this.findClosestMatch(item, dataSource));
       });
     },
     findClosestMatch(item, dataSource) {
@@ -181,10 +179,10 @@ export default {
   },
   mounted() {
     Promise.all([
-      fetch('https://raw.githubusercontent.com/LastingN/paint-conversion/refs/heads/master/json/GW.json').then(response => response.json()),
-      fetch('https://raw.githubusercontent.com/LastingN/paint-conversion/refs/heads/master/json/avModel.json').then(response => response.json()),
-      fetch('https://raw.githubusercontent.com/LastingN/paint-conversion/refs/heads/master/json/avGame.json').then(response => response.json()),
-      fetch('https://raw.githubusercontent.com/LastingN/paint-conversion/refs/heads/master/json/ak3.json').then(response => response.json())
+      fetch('https://raw.githubusercontent.com/LastingN/color-contrast/refs/heads/main/src/json/GW.json').then(response => response.json()),
+      fetch('https://raw.githubusercontent.com/LastingN/color-contrast/refs/heads/main/src/json/avModel.json').then(response => response.json()),
+      fetch('https://raw.githubusercontent.com/LastingN/color-contrast/refs/heads/main/src/json/avGame.json').then(response => response.json()),
+      fetch('https://raw.githubusercontent.com/LastingN/color-contrast/refs/heads/main/src/json/ak3.json').then(response => response.json())
     ]).then(([gwData, avModelData, avGameData, ak3Data]) => {
       this.gwData = gwData.map(item => ({
         name: item.name,
