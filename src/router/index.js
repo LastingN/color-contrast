@@ -32,4 +32,13 @@ const router = createRouter({
   routes
 })
 
+// 添加全局导航守卫来处理 404 问题
+router.beforeEach((to, from, next) => {
+  if (to.matched.length === 0) {
+    next('/'); // 如果路由不匹配，重定向到首页
+  } else {
+    next();
+  }
+});
+
 export default router
