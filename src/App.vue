@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <header>
           <img alt="logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
           <div class="wrapper">
-            <Home msg="color contrast" />
+            <Home msg="color contrast" class="home-msg" />
             <nav>
               <RouterLink 
                 to="/" 
@@ -47,6 +47,12 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+.home-msg {
+  white-space: nowrap; /* 防止文本换行 */
+  overflow: hidden; /* 隐藏溢出文本 */
+  text-overflow: ellipsis; /* 使用省略号表示溢出文本 */
 }
 
 nav a {

@@ -8,6 +8,11 @@
     <h1 class="color-palette" @click="goToPalette">取色盘</h1>
     <p>上传图片后，点击取色按钮，将鼠标放置到目标位置，即可获取目标位置的色值</p>
   </div>
+
+  <div class="list">
+    <h1 class="toning" @click="goToToning">调色盘</h1>
+    <p>选择不同的油漆显示它不同的透明度颜色以及与其他漆混合之后的颜色</p>
+  </div>
 </template>
 
 <script setup>
@@ -21,6 +26,10 @@ const goToPaintContrast = () => {
 
 const goToPalette = () => {
   router.push('/palette')
+}
+
+const goToToning = () => {
+  router.push('/toning')
 }
 </script>
 
@@ -42,11 +51,7 @@ h1 {
   text-shadow: 0 0 10px rgba(66, 185, 131, 0.5); /* 字体发光效果 */
 }
 
-.paint-comparison {
-  cursor: pointer; /* 鼠标悬停时显示手型光标 */
-}
-
-.color-palette {
+.paint-comparison .color-palette .toning {
   cursor: pointer; /* 鼠标悬停时显示手型光标 */
 }
 </style>

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ColorPalette from '@/components/Palette.vue'
 import PaintContrast from '@/components/PaintContrast.vue'
+import Toning from '@/components/Toning.vue'
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: '/palette',
     name: 'palette',
     component: ColorPalette,
+  },
+  {
+    path: '/toning',
+    name: 'toning',
+    component: Toning,
   },
   {
     path: '/about',

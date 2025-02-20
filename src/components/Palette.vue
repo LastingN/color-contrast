@@ -1,7 +1,7 @@
 <template>
   <div class="palette-container">
     <div class="page-title">
-      <h1 style="font-size: 32px;">取色盘</h1>
+      <h1>取色盘</h1>
     </div>
     
     <div class="controls">
@@ -154,7 +154,7 @@ export default {
   left: -65px; /* 设置在容器左侧 */
   margin: 0; /* 移除外边距 */
   padding: 10px; /* 添加内边距以确保文本不紧贴边缘 */
-  font-size: 32px;
+  font-size: 16px;
   color: #42b983;
   z-index: 10; /* 确保在其他元素之上 */
 }
